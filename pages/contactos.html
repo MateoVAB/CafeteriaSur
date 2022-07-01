@@ -6,55 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria Sur</title>
     <link rel="shortcut icon" href="../img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
-<body>
-  <div class="navheader">
-    <nav>
+<body class="container-fluid">
+  <div class="col-md-12 col-xs-6">
+    <nav class="navbar navbar-expand-xl navbar-light sticky-top">
         <a href="../index.html">
         <img src="../img/logo.png" alt="Logo cafeteria">
         </a>
         <h1>THE COFFE SHOP</h1>
-        <ul>
-          <li>
-            <a href="../index.html">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active"href="../index.html">Inicio</a>
           </li>
-           <li>
-             <a href="nosotros.html">Nosotros</a> 
+           <li class="nav-item">
+             <a class="nav-link active"href="nosotros.html">Nosotros</a> 
            </li>
-           <li>
-             <a href="productos.html">Productos</a> 
+           <li class="nav-item">
+             <a class="nav-link active"href="productos.html">Productos</a> 
            </li>
-           <li>
-             <a href="buscanos.html"> Buscanos</a> 
+           <li class="nav-item">
+             <a class="nav-link active"href="buscanos.html"> Buscanos</a> 
            </li>
-           <li>
-             <a href="contactos.html">Contactos</a>
+           <li class="nav-item">
+             <a class="nav-link active"href="contactos.html">Contactos</a>
            </li>
         </ul>
+        </div>
     </nav>
   </div>
     <!--Termina el navegador-->
     <div class="contacto">
     <main>
       <section>
-        <form action="envio.php">
+        <form role="form">
+          <div class="form-group">
             <fieldset>
               <legend><b>Contacto</b></legend>
               <label for="name">Nombre</label>                                                    
-              <input type="text" id="name" placeholder="Nombre"></label>
+              <input type="text" class="form-control" id="name" placeholder="Nombre"></label>
               <br>
               <label for="name">Apellido</label>
-              <input type="text" id="name" placeholder="Apellido">
+              <input type="text" class="form-control"id="name" placeholder="Apellido">
               <br>
               <label for="text">Email</label>
-              <input type="text" id="Email" placeholder="mail@correo.com"></input>
+              <input type="text" class="form-control"id="Email" placeholder="mail@correo.com"></input>
               <br>
               <label for="text">Teléfono</label>
-              <input type="text" name="numero" id="Teléfono">
+              <input type="text" class="form-control"name="numero" id="Teléfono">
               <br>  
               <div class="genero">
-              <select name="Sexo" id="Sexo">
+              <select class="form-select" aria-label="Default select example"name="Sexo" id="Sexo">
                 <div class="genero">
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
@@ -66,11 +70,12 @@
               <div class="mensajes">
               <label for="text">Dejenos su Mensaje</label>
               <br>
-              <textarea name"" id="" cols="30" rows="10" placeholder="Comentarios"></textarea>
+              <textarea name"" class="form-control" id="" cols="30" rows="10" placeholder="Comentarios"></textarea>
               <br>
               <input type="reset" value="Limpiar Formulario"> <input type="submit" value="Enviar Formulario">
             </div>
             </fieldset>
+          </div>
             <br>
           </form>
       </section>
