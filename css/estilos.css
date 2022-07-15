@@ -7,7 +7,6 @@
   50% {
     border-color: transparent; } }
 
-/*# sourceMappingURL=estilos.css.map */
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -17,22 +16,19 @@
 
 nav {
   display: flex;
-  margin-top: 10px;
-  padding: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  margin-top: 10px;
+  padding: auto;
   background-image: linear-gradient(#EADDCA, #b9a672); }
   nav ul {
     text-decoration: none;
     list-style: none; }
     nav ul li a {
-      color: black;
       font-weight: bold; }
       nav ul li a:hover {
-        text-decoration: none;
-        color: #160f06; }
+        text-decoration: none; }
   nav h1 {
     padding-top: 15px;
     font-weight: bold;
@@ -46,8 +42,9 @@ nav {
 header {
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
-  background-color: #EADDCA; }
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px; }
   header h2 {
     text-align: center;
     font-size: 1.5em;
@@ -55,37 +52,44 @@ header {
     padding: auto; }
   header img {
     flex-direction: column;
-    width: 55vw;
-    transform: translateX(120px); }
+    width: 55vw; }
 
-main {
-  background-color: #EADDCA; }
-  main h2 {
-    padding-top: 15px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold; }
-  main img {
-    display: flex;
-    flex-direction: column;
-    width: 55vw;
-    justify-content: center;
-    transform: translateX(120px); }
-  main p {
-    display: flex;
-    flex-direction: column;
-    padding-top: 15px;
-    font-weight: bold;
-    font-size: 1em;
-    margin: auto; }
-  main iframe {
-    flex-direction: column;
-    transform: translateX(40px);
-    width: 80%;
-    display: flex;
-    justify-content: center; }
+main h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold; }
+
+main img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  justify-content: center;
+  transform: translateX(120px); }
+
+main p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 1em;
+  margin: auto; }
+
+main iframe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(40px);
+  width: 80%; }
 
 .pie {
   display: flex;
@@ -99,7 +103,8 @@ main {
   .pie a img {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
   .pie h3 {
     justify-content: center;
     text-align: center; }
@@ -168,10 +173,24 @@ option {
 .ciudades {
   transform: translateX(10px); }
 
+.input-more, .input-rounded {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .input-more:hover, .input-rounded:hover {
+    cursor: pointer; }
+
+.input-rounded {
+  border-radius: 2px; }
+
 @media (min-width: 720px) {
   nav {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     justify-content: space-between;
     background-image: linear-gradient(#EADDCA, #b9a672); }
     nav ul {
@@ -181,31 +200,28 @@ option {
       align-items: center;
       letter-spacing: 0.8px;
       list-style: none; }
-  header {
-    background-color: #EADDCA; }
-    header h2 {
-      font-size: 1.7em; }
-    header img {
-      display: flex;
-      width: 35vw;
-      flex-direction: row;
-      transform: translateX(400px); }
-  main {
-    background-color: #EADDCA; }
-    main h2 {
-      font-size: 1.8em;
-      padding-top: 25px; }
-    main img {
-      padding-top: 15px;
-      display: flex;
-      transform: translateX(400px);
-      width: 35vw; }
+  header h2 {
+    font-size: 1.7em; }
+  header img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35vw; }
+  main h2 {
+    font-size: 1.8em;
+    padding-top: 25px; }
+  main img {
+    padding-top: 15px;
+    display: flex;
+    transform: translateX(400px);
+    width: 35vw; }
   footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: 15px;
-    background-color: white;
     background-image: linear-gradient(#EADDCA, #b9a672); }
     footer h2 {
       display: flex;
@@ -215,7 +231,8 @@ option {
     footer a img {
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      align-items: center; }
     footer h3 {
       justify-content: center;
       text-align: center; } }
