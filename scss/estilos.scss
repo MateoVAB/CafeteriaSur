@@ -33,28 +33,29 @@ $f-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
     list-style: none;
+	
 }
 nav {
 	@include flexible(flex , column, center, center);
 	margin-top: 10px;
 	padding: auto;
-	$background-color: map-get($colores, bg-color_1 );
+	background-color: map-get($colores, bg-color_1 );
 	background-image: linear-gradient(#EADDCA, rgb(185, 166, 114));
 	ul {
 		text-decoration: none;
 		list-style: none;
 		li {
 			a {
-				$color: map-get($colores , color_1 );
+				color: map-get($colores , color_1 );
 				font-weight: bold;
 				&:hover {
 					text-decoration: none;
-					$color: map-get($colores , color_1 );
+					color: map-get($colores , color_1 );
 				}
 			}
 		}
 	}
-	h1 {
+    h1 {
 		padding-top: 15px;
 		font-weight: bold;
 		white-space: nowrap;
@@ -68,7 +69,7 @@ nav {
 header {
 	@include flexible(flex, column, center, center);
 	padding-top: 15px;
-	$background-color: map-get($colores , bg-color_2 );
+	background-color: map-get($colores , bg-color_2 );
 	h2 {
 		text-align: center;
 		font-size: 1.5em;
@@ -81,7 +82,7 @@ header {
 	}
 }
 main {
-	$background-color: map-get($colores , bg-color_2 );
+	background-color: map-get($colores , bg-color_2 );
 	h2 {
 		@include flexible(flex, column, center, center);
 		padding-top: 15px;
@@ -204,7 +205,7 @@ option {
 	border:none;
     @include flexible(flex, row, space-around, center);
     &:hover{
-		$background-color_2: #EADDCA;
+		background-color: #EADDCA;
         cursor:pointer
 	}
 }
@@ -213,23 +214,19 @@ option {
 	border-radius: 2px;
 }
 
-
 @media (min-width:720px) {
 	nav {
 		@include flexible(flex, row, center, center);
 		justify-content: space-between;
 		background-image: linear-gradient(#EADDCA, rgb(185, 166, 114));
 		ul {
-			display: flex;
-			justify-content: center;
-			text-align: center;
-			align-items: center;
+			@include flexible(flex, row, center, center);
 			letter-spacing: 0.8px;
 			list-style: none;
 		}
 	}
 	header {
-		$background-color: map-get($colores , bg-color_2 );
+		background-color: map-get($colores , bg-color_2 );
 		h2 {
 			font-size: 1.7em;
 		}
@@ -241,7 +238,7 @@ option {
 		}
 	}
 	main {
-		$background-color:map-get($colores , bg-color_2 ) ;
+		background-color:map-get($colores , bg-color_2 ) ;
 		h2 {
 			font-size: 1.8em;
 			padding-top: 25px;
@@ -256,7 +253,7 @@ option {
 	footer {
 		@include flexible(flex, row, space-between, center);
 		padding-top: 15px;
-		$background-color: map-remove($colores , bg-color_1 );
+		background-color: map-get($colores , bg-color_1 );
 		background-image: linear-gradient(#EADDCA, rgb(185, 166, 114));
 		h2 {
 			display: flex;
@@ -266,7 +263,7 @@ option {
 		}
 		a {
 			img {
-				@include flexible(flex, column, center, center);
+				@include flexible(flex, row, center, center);
 			}
 		}
 		h3 {
