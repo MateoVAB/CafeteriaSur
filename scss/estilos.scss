@@ -35,6 +35,17 @@ $f-family: 'Roboto', sans-serif;
     list-style: none;
 	
 }
+body{
+	margin: 5px;
+}
+nav img{
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px
+}
+
+
+
 nav {
 	@include flexible(flex , column, center, center);
 	margin-top: 10px;
@@ -46,6 +57,8 @@ nav {
 		list-style: none;
 		li {
 			a {
+				margin: 3px;
+				padding: 3px;
 				color: map-get($colores , color_1 );
 				font-weight: bold;
 				&:hover {
@@ -100,7 +113,7 @@ main {
 		@include flexible(flex, column, center, center);
 		padding-top: 15px;
 		font-weight: bold;
-		font-size: 1em;
+		font-size: 1.2em;
 		margin: auto;
 	}
 	iframe {
@@ -167,9 +180,8 @@ option {
 		font-size: 1.2em;
 	}
 	img {
-		display: flex;
-		justify-content: center;
-		width: 33vw;
+		@include flexible(flex, column, center, center);
+		width: 30vw;
 	}
 }
 .tabla-balanza {
